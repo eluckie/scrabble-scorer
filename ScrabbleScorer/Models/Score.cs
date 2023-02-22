@@ -13,6 +13,7 @@ namespace ScrabbleScorer.Models
       {'F', 4}, {'H', 4}, {'V', 4}, {'W', 4}, {'Y', 4},
       {'K', 5},
       {'J', 8}, {'X', 8},
+      {'Q', 10}, {'Z', 10}
     };
     public Score()
     {
