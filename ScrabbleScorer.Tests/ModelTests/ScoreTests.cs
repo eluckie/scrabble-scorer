@@ -43,5 +43,15 @@ namespace ScrabbleScorer.Tests
       letterPoints['G'] = 2;
       CollectionAssert.AreEquivalent(new Dictionary<char, int>() { {'A', 1}, {'E', 1}, {'I', 1}, {'O', 1}, {'U', 1}, {'L', 1}, {'N', 1}, {'R', 1}, {'S', 1}, {'T', 1}, {'D', 2}, {'G', 2} }, letterPoints);
     }
+    [TestMethod]
+    public void ScoreClass_AddCharactersWorthThreePointsToDictionary_Dictionary()
+    {
+      Dictionary<char, int> letterPoints = new Dictionary<char, int>() { {'A', 1}, {'E', 1}, {'I', 1}, {'O', 1}, {'U', 1}, {'L', 1}, {'N', 1}, {'R', 1}, {'S', 1}, {'T', 1}, {'D', 2}, {'G', 2} };
+      letterPoints['B'] = 3;
+      letterPoints['C'] = 3;
+      letterPoints['M'] = 3;
+      letterPoints['P'] = 3;
+      CollectionAssert.AreEquivalent(new Dictionary<char, int>() { {'A', 1}, {'E', 1}, {'I', 1}, {'O', 1}, {'U', 1}, {'L', 1}, {'N', 1}, {'R', 1}, {'S', 1}, {'T', 1}, {'D', 2}, {'G', 2}, {'B', 3}, {'C', 3}, {'M', 3}, {'P', 3} }, letterPoints);
+    }
   }
 }
